@@ -15,7 +15,7 @@ namespace First_Task
         
         static void Main(string[] args)
         {
-            Program ob = new Program(15, 10, 8, 5);
+            Program ob = new Program(5, 10, 8, 5);
             uint length = ob.Bx - ob.Ax;
             uint width = ob.Ay - ob.By;
             uint perim = Perimeter(ob);
