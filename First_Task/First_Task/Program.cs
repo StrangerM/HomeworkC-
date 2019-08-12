@@ -12,6 +12,7 @@ namespace First_Task
         int Ay;
         int Bx;
         int By;
+        
         static void Main(string[] args)
         {
             Program ob = new Program(5, 10, 8, 5);
@@ -24,7 +25,7 @@ namespace First_Task
         }
         public Program(int ax, int ay, int bx, int by)
         {
-            if ((ax >= bx) || (ay <= by))
+            if ((ax >= bx) && (ay <= by))
             {
                 Console.WriteLine("ax has to be less than bx and ay -bigger than by");
                 Console.ReadKey();
