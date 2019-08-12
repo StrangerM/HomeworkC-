@@ -8,34 +8,36 @@ namespace Second_Task
 {
     class Program
     {
-        int Ax;
-        int Ay;
-        int Bx;
-        int By;
-        public Program(int ax, int ay, int bx, int by)
+        uint Ax;
+        uint Ay;
+        uint Bx;
+        uint By;
+        public Program(uint ax, uint ay, uint bx, uint by)
         {
             Ax = ax;
             Ay = ay;
             Bx = bx;
             By = by;
-        }
-        public int Square
-        {
-            get { if ((Ax >= Bx) && (Ay <= By))
-                {
-                    Console.WriteLine("ax has to be less than bx");
-                    Console.ReadKey();
-                    return 0;
-                }
-                else {
 
-                    int len = Bx - Ax;
-                    int widh = Ay - By;
-                    int sqr = len * widh;
+            if ((Ax >= Bx) && (By <= By))
+            {
+                Console.WriteLine("ax has to be less than bx and ay -bigger than by");
+                Console.ReadKey();
+                return;
+            }
+
+        }
+        public uint Square
+        {
+            get { 
+
+                    uint len = Bx - Ax;
+                    uint widh = Ay - By;
+                    uint sqr = len * widh;
                     return sqr;
                 }
                 
-                }
+                
             //set {
             //    value = Ax;
             //    value = Ay;
@@ -44,25 +46,14 @@ namespace Second_Task
             //}
 
         }
-        public int Perim
+        public uint Perim
         {
             get
             {
-                if ((Ax >= Bx) && (Ay <= By))
-                {
-                    Console.WriteLine("ax has to be less than bx");
-                    Console.ReadKey();
-                    return 0;
-                }
-                else
-                {
-
-                    int len = Bx - Ax;
-                    int widh = Ay - By;
-                    int per = 2*len + 2*widh;
+                    uint len = Bx - Ax;
+                    uint widh = Ay - By;
+                    uint per = 2*len + 2*widh;
                     return per;
-                }
-
             }
             //set {
             //    value = Ax;
@@ -70,13 +61,12 @@ namespace Second_Task
             //    value = Bx;
             //    value = By;
             //}
-
         }
         static void Main(string[] args)
         {
-            Program ob = new Program(5, 10, 8, 5);
-            int sq = ob.Square;
-            int per = ob.Perim;
+            Program ob = new Program(1, 10, 8, 5);
+            uint sq = ob.Square;
+            uint per = ob.Perim;
             Console.WriteLine(sq + " "+ per);
             Console.ReadKey();
 
