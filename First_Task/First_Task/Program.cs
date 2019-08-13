@@ -30,7 +30,7 @@ namespace First_Task
             Bx = bx;
             By = by;
 
-            if ((Ax >= Bx) && (By <= By))
+            if ((Ax >= Bx) && (By <= Ay))
             {
                 Console.WriteLine("ax has to be less than bx and ay -bigger than by");
                 Console.ReadKey();
