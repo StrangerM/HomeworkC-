@@ -6,15 +6,15 @@ using System.Threading.Tasks;
 
 namespace Task2_1
 {
-    class Figure
+   abstract class Figure
     {
         static void Main(string[] args)
         {
         }
-        public virtual void Draw()
-        {
-            Console.WriteLine( "It is Figure clas");
-        }
+        public abstract void Draw();
+        
+           
+        
     }
     class Square : Figure
     {
